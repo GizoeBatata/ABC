@@ -37,16 +37,89 @@ namespace ABC.Test
         [TestMethod]
         public void TestMethod3()
         {
-            //input
+            //Arrange
             Customer customer = new Customer();
             customer.LastName = "Kazan";
 
             string expected = "Kazan";
-            //compare value
+            //Act
 
             string realvalue = customer.FullName;
-            //Asserting
+            //Assert
             Assert.AreEqual(expected, realvalue);
         }
+
+        
+
+            
+
+        }
+    [TestClass]
+    public class Unittest2 {
+        [TestMethod]
+        public void statictest()
+        {
+            var c1 = new Customer();
+            Customer.instanceCount += 1;
+
+            Customer c2 = new Customer();
+            Customer.instanceCount += 1;
+
+            Customer c3 = new Customer();
+            Customer.instanceCount += 1;
+
+
+            Assert.AreEqual(3, Customer.instanceCount);
+
+        }
+    }
+
+    [TestClass]
+    public class Unittest3
+    {
+      [TestMethod]
+        public void trueValidate()
+        {
+            //Act
+            var customer4 = new Customer();
+            customer4.EmailAddress = "hans@gmail.com";
+            customer4.LastName = "Anders";
+
+            //Arrange
+            bool expected = true;
+            //Assert
+            Assert.AreEqual(expected, customer4.Validate());
+
+        }
+
+        [TestMethod]
+        public void missingLnameValidate()
+        {
+            //Act
+            var customer4 = new Customer();
+            customer4.EmailAddress = "hans@gmail.com";
+           
+
+            //Arrange
+            bool expected = true;
+            //Assert
+            Assert.AreEqual(expected, customer4.Validate());
+
+        }
+        [TestMethod]
+        public void missingEmailAddressValidate()
+        {
+            //Act
+            var customer4 = new Customer();
+            customer4.LastName = "Anders";
+           
+
+            //Arrange
+            bool expected = true;
+            //Assert
+            Assert.AreEqual(expected, customer4.Validate());
+
+        }
+
     }
 }
