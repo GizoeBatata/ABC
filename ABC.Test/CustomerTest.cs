@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace ABC.Test
 {
     [TestClass]
-    public class UnitTest1
+    public class CustomerTest
     {
         [TestMethod]
         public void TestMethod1()

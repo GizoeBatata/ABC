@@ -23,20 +23,7 @@ namespace ABC.BS
         public decimal CurrentPrice { get; set; }
         public int ProductId { get; private set; }
 
-        public Product Retrieve(int productID)
-        {
-            return new Product();
-        }
-
-        public List<Product> Retrieve()
-        {
-           return new List<Product>();
-        }
-
-        public bool Save()
-        {
-            return true;
-        }
+       
 
         public string FullProduct()
         {

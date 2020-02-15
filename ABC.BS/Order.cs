@@ -20,17 +20,9 @@ namespace ABC.BS
 
 
         public int Orderid { get; private set; }
-        public DateTimeOffset? OrderDate { get; set; }
+        public DateTimeOffset OrderDate { get; set; }
 
-        public Order Retrieve(int orderID)
-        {
-            return new Order();
-        }
-
-        public bool Save()
-        {
-            return true;
-        }
+        
 
         public bool Validate()
         {
