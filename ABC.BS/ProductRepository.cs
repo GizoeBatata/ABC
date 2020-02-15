@@ -29,7 +29,7 @@ namespace ABC.BS
             return new List<Product>();
         }
 
-        public bool Save()
+        public bool Save(Product product)
         {
             return true;
         }

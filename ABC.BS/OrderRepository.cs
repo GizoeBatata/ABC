@@ -19,7 +19,7 @@ namespace ABC.BS
             return order;
         }
 
-        public bool Save()
+        public bool Save(Order order)
         {
             return true;
         }

@@ -27,7 +27,7 @@ namespace ABC.BS
             return new List<Customer>();
         }
 
-        public bool Save()
+        public bool Save(Customer customer)
         {
             return true;
         }
