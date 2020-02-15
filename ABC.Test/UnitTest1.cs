@@ -156,6 +156,49 @@ namespace ABC.Test
             }
 
         }
+        [TestClass]
+        public class OrderTest
+        {
+            [TestMethod]
+            public void ValidateOrderDate()
+            {
+                //act
+                Order order = new Order();
+                order.OrderDate = System.DateTime.Now;
+                bool expected = true;
+                //arrange
+                bool real = order.Validate();
+                //assert
+                Assert.AreEqual(expected, real);
+            }
+
+        }
+
+    }
+
+    [TestClass]
+    public class OrderItemTest
+    {
+        [TestMethod]
+
+        public void OrderItemValidate()
+        {
+            //act
+            OrderItem orderItem = new OrderItem();
+            orderItem.OrderQuantity = 10;
+            orderItem.PurchasePrice = 99.99M;
+            orderItem.ProductId = 10;
+
+            bool expected = true;
+            //arr
+            bool real=orderItem.Validate();
+            //assert
+            Assert.AreEqual(expected, real);
+
+
+
+        }
+
 
     }
 }
