@@ -14,7 +14,21 @@ namespace ABC.BS
 
         public string FullName
         {
-            get { return FirstName + "," + LastName; }
+            get
+            {
+                
+                if (!string.IsNullOrWhiteSpace(FirstName))
+                {
+                    if (!string.IsNullOrWhiteSpace(LastName))
+                    {
+                        return LastName + ", " + FirstName;
+                    }
+                    return FirstName;
+                }
+                return LastName;
+
+
+            }
 
         }
     }
