@@ -10,15 +10,19 @@ namespace ABC.BS
     {
         //constructor
         public Customer()
+            :this(0)
         {
         }
         public Customer(int customerID)
         {
             this.CustomerID = customerID;
+            AddressList = new List<Address>();
         }
     
         //properties
-        public static int instanceCount;
+        public static int instanceCount { get; set; }
+
+        public List<Address> AddressList { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
