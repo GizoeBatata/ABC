@@ -8,6 +8,16 @@ namespace ABC.BS
 {
     public class Customer
     {
+        //constructor
+        public Customer()
+        {
+        }
+        public Customer(int customerID)
+        {
+            this.CustomerID = customerID;
+        }
+    
+        //properties
         public static int instanceCount;
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -29,6 +39,22 @@ namespace ABC.BS
             }
          }
 
+        public Customer Retrieve(int customerId)
+        {
+            return new Customer();
+
+        }
+
+        public List<Customer> Retrieve()
+        {
+
+            return new List<Customer>();
+         }
+
+        public bool Save()
+        {
+            return true;
+        }
         public bool Validate()
         {
             var isValid = true;

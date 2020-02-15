@@ -49,6 +49,8 @@ namespace ABC.Test
             Assert.AreEqual(expected, realvalue);
         }
 
+
+
         
 
             
@@ -118,6 +120,40 @@ namespace ABC.Test
             bool expected = true;
             //Assert
             Assert.AreEqual(expected, customer4.Validate());
+
+        }
+
+       [TestClass]
+       public class ProductTest
+        {
+            [TestMethod]
+        public void Validate()
+            {
+                //act
+                Product product = new Product();
+                product.ProductName = "Shampoo";
+                product.CurrentPrice = 10.34M;
+                bool expected = true;
+                //arrange
+               bool real= product.Validate();
+                //assert
+                Assert.AreEqual(expected, real);
+            }
+            [TestMethod]
+            public void FullProduct()
+            {
+                //act
+
+                Product product1 = new Product();
+                product1.ProductName = "Banaan";
+                product1.Description = "Fresh from Jamaica !";
+                string expected = "Banaan Fresh from Jamaica !";
+                //arrange
+                string real = product1.FullProduct();
+
+                //assert
+                Assert.AreEqual(expected, real);
+            }
 
         }
 
